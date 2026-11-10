@@ -61,14 +61,14 @@
     "@perrylink/dsh-claim-check": "0.1.2",
     "@perrylink/dsh-research-core": "0.1.1",
     "dsh-cite-verify": "0.2.0",
-    "dsh-doc-anchor": "0.1.1",
-    "dsh-library": "0.2.26",
+    "dsh-doc-anchor": "0.2.0",
+    "dsh-library": "0.3.0",
     "dsh-manuscript-check": "0.1.2",
     "dsh-meta-analysis": "0.1.2",
     "dsh-repro-audit": "0.1.3",
-    "dsh-research-report": "0.3.32",
+    "dsh-research-report": "0.4.0",
     "dsh-retraction-watch": "0.1.1",
-    "dsh-sr-ledger": "0.1.2",
+    "dsh-sr-ledger": "0.2.0",
     "dsh-statcheck": "0.1.1"
   },
   "devDependencies": {
