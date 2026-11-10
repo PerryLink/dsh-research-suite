@@ -1,0 +1,34 @@
+# dsh-research-suite bundle patch: one layer for the research family.
+#
+# The suite row only mounts `research_doctor`; every other row is a plugin this
+# package depends on. Defaults are used so each plugin keeps its own store; the
+# core default (`.research-rep`) is the root the doctor reads. Disable a row in
+# the profile (rather than editing this file) when a project does not need that
+# capability.
+- insert:
+    - id: dsh-research-suite
+      name: '@perrylink/dsh-research-suite'
+    - id: dsh-research-core
+      name: '@perrylink/dsh-research-core'
+    - id: dsh-doc-anchor
+      name: dsh-doc-anchor
+    - id: dsh-cite-verify
+      name: dsh-cite-verify
+    - id: dsh-claim-check
+      name: '@perrylink/dsh-claim-check'
+    - id: dsh-statcheck
+      name: dsh-statcheck
+    - id: dsh-retraction-watch
+      name: dsh-retraction-watch
+    - id: dsh-repro-audit
+      name: dsh-repro-audit
+    - id: dsh-sr-ledger
+      name: dsh-sr-ledger
+    - id: dsh-meta-analysis
+      name: dsh-meta-analysis
+    - id: dsh-manuscript-check
+      name: dsh-manuscript-check
+    - id: dsh-research-report
+      name: dsh-research-report
+    - id: dsh-library
+      name: dsh-library
