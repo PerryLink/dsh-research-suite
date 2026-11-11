@@ -76,11 +76,14 @@ The doctor also accepts a per-call `root` override.
 
 ```sh
 pnpm install
+pnpm run check:lockfile
 pnpm typecheck
 pnpm test
 pnpm build
 pnpm verify:package
 ```
+
+The lockfile is committed exactly as `pnpm install --lockfile-only` writes it (two documents: pnpm's own package-manager document, then the project document), so a local install does not rewrite it. `pnpm run check:lockfile` fails when the lockfile drifts from `package.json` or loses that form.
 
 ## License
 

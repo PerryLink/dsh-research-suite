@@ -76,11 +76,14 @@ doctor 也接受单次调用的 `root` 覆盖。
 
 ```sh
 pnpm install
+pnpm run check:lockfile
 pnpm typecheck
 pnpm test
 pnpm build
 pnpm verify:package
 ```
+
+锁文件按 `pnpm install --lockfile-only` 的原样提交（两段：pnpm 自身的管理文档 + 项目文档），本地 `pnpm install` 不会改写它；`pnpm run check:lockfile` 在它与 `package.json` 不一致或丢失该形式时失败。
 
 ## 许可
 
