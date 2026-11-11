@@ -10,3 +10,13 @@ allowBuilds:
   esbuild: true
 
 verifyDepsBeforeRun: false
+
+# The suite pins the five 2026-11-10 research releases. They are newer than
+# pnpm 12's 24h minimum-release-age window, so a fresh install would reject
+# the pins; exclude exactly those versions instead of disabling the policy.
+minimumReleaseAgeExclude:
+  - dsh-cite-verify@0.2.0
+  - dsh-doc-anchor@0.2.0
+  - dsh-library@0.3.0
+  - dsh-research-report@0.4.0
+  - dsh-sr-ledger@0.2.0
