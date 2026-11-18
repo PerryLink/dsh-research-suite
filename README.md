@@ -49,7 +49,7 @@ It is **read-only**. It never repairs, deletes, edits or creates a record. A mal
 
 | | |
 |---|---|
-| DeepSeek Harness | `dsh-v0.2.1-rc.5` (verified on this machine) — peer line `>=0.2.1-0 <0.3.0 \|\| >=0.2.2-0 <0.3.0` |
+| DeepSeek Harness | `dsh-v0.2.2-rc.4` (verified on this machine) — peer line `>=0.2.1-0 <0.3.0 \|\| >=0.2.2-0 <0.3.0` |
 | Node | `^22.19.0 \|\| >=24.9.0` (tested on `24.22.1`), ESM only |
 | Peers | `@deepseek-ai/cordis ^4.0.5-alpha.1`, `@deepseek-ai/dsh-tools`, `@deepseek-ai/schemastery ^3.18.5-alpha.1` |
 | Runtime dependencies | the twelve research plugins (pinned) |
