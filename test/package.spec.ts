@@ -38,7 +38,7 @@ describe('package contract', () => {
     for (const dependency of Object.keys(pkg.dependencies)) {
       expect(names).toContain(dependency)
     }
-    const allowed = new Set([...Object.keys(pkg.dependencies), 'dsh-research-suite-perrylink'])
+    const allowed = new Set([...Object.keys(pkg.dependencies), 'dsh-research-suite-plugin'])
     for (const name of names) expect(allowed.has(name)).toBe(true)
   })
 })

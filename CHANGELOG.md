@@ -1,17 +1,24 @@
 # Changelog
 
+## [0.1.4] - 2026-11-20
+
+### Changed
+
+- Publish under the bare npm name dsh-research-suite-plugin.
+
+
 ## [0.1.3] - 2026-11-20
 
 ### Changed
 
-- Publish under the bare npm name dsh-research-suite-perrylink (the name must keep the dsh prefix).
+- Publish under the bare npm name dsh-research-suite-plugin (the name must keep the dsh prefix).
 
 
 ## [0.1.2] - 2026-11-20
 
 ### Changed
 
-- Publish under the bare npm name dsh-research-suite-perrylink (the scoped name was retired from the release path).
+- Publish under the bare npm name dsh-research-suite-plugin (the scoped name was retired from the release path).
 
 
 All notable changes to this project are documented here. The format follows
@@ -22,7 +29,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
-- `dsh-research-suite-perrylink`: one bundle layer for `dsh-research-core`,
+- `dsh-research-suite-plugin`: one bundle layer for `dsh-research-core`,
   `dsh-doc-anchor`, `dsh-cite-verify`, `dsh-claim-check`, `dsh-statcheck`,
   `dsh-retraction-watch`, `dsh-repro-audit`, `dsh-sr-ledger`,
   `dsh-meta-analysis`, `dsh-manuscript-check`, `dsh-research-report` and

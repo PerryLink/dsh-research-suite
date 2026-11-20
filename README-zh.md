@@ -1,4 +1,4 @@
-# dsh-research-suite-perrylink
+# dsh-research-suite-plugin
 
 **一条命令装好科研插件族 —— 再加一个体检工具，告诉你证据库是否健康。**
 
@@ -21,7 +21,7 @@
 ## 安装
 
 ```sh
-dsh plugin --profile <name> add dsh-research-suite-perrylink
+dsh plugin --profile <name> add dsh-research-suite-plugin
 dsh --profile <name> --dump-config | grep -E 'research|cite-verify|doc-anchor|statcheck|claim-check|sr-ledger|meta-analysis|manuscript|retraction|repro-audit|library'
 ```
 

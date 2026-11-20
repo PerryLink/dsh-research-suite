@@ -2,7 +2,7 @@
 
 ## Scope
 
-`dsh-research-suite-perrylink` is a bundle plus one read-only tool. It declares
+`dsh-research-suite-plugin` is a bundle plus one read-only tool. It declares
 the twelve research plugins as dependencies and mounts `research_doctor`; it
 re-implements no tool.
 
