@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.6] - 2026-11-20
+
+### Changed
+
+- Publish the corrected tarball with the built lib/ tree under dsh-research-suite-plugin.
+
+
 ## [0.1.5] - 2026-11-20
 
 ### Changed
