@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2] - 2026-11-20
+
+### Changed
+
+- Publish under the bare npm name perrylink-research-suite (the scoped name was retired from the release path).
+
+
 All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -8,7 +15,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
-- `@perrylink/dsh-research-suite`: one bundle layer for `dsh-research-core`,
+- `perrylink-research-suite`: one bundle layer for `dsh-research-core`,
   `dsh-doc-anchor`, `dsh-cite-verify`, `dsh-claim-check`, `dsh-statcheck`,
   `dsh-retraction-watch`, `dsh-repro-audit`, `dsh-sr-ledger`,
   `dsh-meta-analysis`, `dsh-manuscript-check`, `dsh-research-report` and

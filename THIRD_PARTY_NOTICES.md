@@ -26,5 +26,5 @@ bundled and are not part of the published tarball.
 
 ## License
 
-`@perrylink/dsh-research-suite` is licensed under Apache-2.0. See
+`perrylink-research-suite` is licensed under Apache-2.0. See
 [LICENSE](LICENSE).

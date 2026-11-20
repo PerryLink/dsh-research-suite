@@ -1,4 +1,4 @@
-# @perrylink/dsh-research-suite
+# perrylink-research-suite
 
 **One command for the research family — plus a doctor that tells you whether the evidence store is healthy.**
 
@@ -21,7 +21,7 @@ This package is the **bundle** for that set. One dependency tree, one `cordis.pa
 ## Install
 
 ```sh
-dsh plugin --profile <name> add @perrylink/dsh-research-suite
+dsh plugin --profile <name> add perrylink-research-suite
 dsh --profile <name> --dump-config | grep -E 'research|cite-verify|doc-anchor|statcheck|claim-check|sr-ledger|meta-analysis|manuscript|retraction|repro-audit|library'
 ```
 

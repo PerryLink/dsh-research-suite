@@ -7,7 +7,7 @@
 # capability.
 - insert:
     - id: dsh-research-suite
-      name: '@perrylink/dsh-research-suite'
+      name: 'perrylink-research-suite'
     - id: dsh-research-core
       name: '@perrylink/dsh-research-core'
     - id: dsh-doc-anchor

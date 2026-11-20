@@ -1,5 +1,5 @@
 /**
- * `@perrylink/dsh-research-suite` — one bundle layer for the research family,
+ * `perrylink-research-suite` — one bundle layer for the research family,
  * plus `research_doctor`.
  *
  * The bundle patch installs the evidence, verification, systematic-review and
