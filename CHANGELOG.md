@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5] - 2026-11-20
+
+### Changed
+
+- Re-publish after the 0.1.4 staged entry could not be listed; no code change.
+
+
 ## [0.1.4] - 2026-11-20
 
 ### Changed
