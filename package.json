@@ -1,6 +1,6 @@
 {
   "name": "dsh-research-suite-plugin",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "One-command research suite for DeepSeek Harness: installs the core evidence, verification, systematic-review and report plugins as one bundle layer, and adds a research_doctor health check for the REP store.",
   "author": "PerryLink contributors",
   "license": "Apache-2.0",

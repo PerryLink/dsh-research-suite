@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.7] - 2026-11-20
+
+### Changed
+
+- First release through the Trusted Publisher OIDC path.
+
+
 ## [0.1.6] - 2026-11-20
 
 ### Changed
