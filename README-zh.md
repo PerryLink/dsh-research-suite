@@ -1,14 +1,23 @@
-# dsh-research-suite-plugin
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-research-suite-hero-zh-dark.webp">
+  <img src="docs/assets/dsh-research-suite-hero-zh-light.webp" width="100%" alt="dsh-research-suite 配图：十二个科研插件作为一个 bundle 挂载，research_doctor 报告 status ok——researchEvidence 与 researchReport 均为 on，evidence.jsonl 1 行、0 坏行，最新 ok.rep.json 已密封">
+</picture>
+
+# dsh-research-suite
 
 **一条命令装好科研插件族 —— 再加一个体检工具，告诉你证据库是否健康。**
 
-*把证据、核验、系统综述与报告插件作为一个 bundle 层安装，并挂载 `research_doctor`：只读检查 REP 根、已挂载的服务、每个 journal，以及最新一条密封记录。*
+*把十二个证据、核验、系统综述与报告插件作为一个 bundle 层安装（本包即 `dsh-research-suite-plugin`），并挂载 `research_doctor`：只读检查 REP 根、已挂载的服务、每个 journal，以及最新一条密封记录。*
+
+[English](README.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/node-%5E22.19%20%7C%7C%20%3E%3D24.9-brightgreen.svg)]()
 [![DSH plugin](https://img.shields.io/badge/dsh--plugin-✅-green)](https://github.com/topics/dsh-plugin)
 
-[English](README.md) · 简体中文
+</div>
 
 ---
 
@@ -17,6 +26,14 @@
 科研族是刻意拆开的独立包：`dsh-research-core`、`dsh-doc-anchor`、`dsh-cite-verify`、`dsh-claim-check`、`dsh-statcheck`、`dsh-retraction-watch`、`dsh-repro-audit`、`dsh-sr-ledger`、`dsh-meta-analysis`、`dsh-manuscript-check`、`dsh-research-report` 与 `dsh-library`。这对组合有利，对上手不利：新 profile 要装十二次，而且装完不知道行有没有真的挂上。
 
 这个包就是那套东西的 **bundle**：一棵依赖树、一个 `cordis.patch.yml`、一行 `research_doctor`。它不重新实现任何工具。
+
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-research-suite-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-research-suite-flow-v5-light.svg" width="100%" alt="dsh-research-suite 结构图：一条 dsh plugin add 安装带十二个依赖行与 doctor 行的 bundle patch，这些行挂载 researchEvidence、researchReport 和一个工具，research_doctor 只读检查 .research-rep 存储并返回 status 与 hints">
+</picture>
+
+*结构：安装 → 挂载 → 检查；`research_doctor` 是本包唯一新增的工具，而且从不修复。图内只有真实的服务名、journal 文件名与配置键，五语共用同一张结构图。*
 
 ## 安装
 
@@ -34,6 +51,11 @@ Run research_doctor.
 健康的 profile 会报告 `research_doctor: ok`、两个服务都 `on`，最新记录带 `(sealed)`。
 
 ## `research_doctor` 检查什么
+
+![dsh-research-suite 测试套件：本检出里 vitest 的真实运行——包契约、挂载、research_doctor 与 REP 检查共 9 项测试——以及报告 12 个依赖行的 verify:package 门禁](docs/assets/dsh-research-suite-demo.gif)
+
+*动图是 2026-11-21 真实运行的 `pnpm exec vitest run` 输出（3 个测试文件、9 个测试），随后是 `pnpm run verify:package`。这个 bundle 没有自己的 CLI，因此 doctor 契约与包门禁就是那次运行；通过标记与耗时已省略。*
+
 
 | 检查 | 含义 |
 |---|---|

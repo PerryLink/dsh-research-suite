@@ -1,14 +1,23 @@
-# dsh-research-suite-plugin
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-research-suite-hero-en-dark.webp">
+  <img src="docs/assets/dsh-research-suite-hero-en-light.webp" width="100%" alt="dsh-research-suite: twelve research plugins mounted as one bundle, with research_doctor reporting status ok — researchEvidence and researchReport on, evidence.jsonl 1 line and 0 malformed, latest ok.rep.json sealed">
+</picture>
+
+# dsh-research-suite
 
 **One command for the research family — plus a doctor that tells you whether the evidence store is healthy.**
 
-*Installs the evidence, verification, systematic-review and report plugins as one bundle layer, and mounts `research_doctor`: a read-only check of the REP root, the mounted services, every journal and the latest sealed record.*
+*Installs the twelve evidence, verification, systematic-review and report plugins as one bundle layer — the package is `dsh-research-suite-plugin` — and mounts `research_doctor`: a read-only check of the REP root, the mounted services, every journal and the latest sealed record.*
+
+[简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/node-%5E22.19%20%7C%7C%20%3E%3D24.9-brightgreen.svg)]()
 [![DSH plugin](https://img.shields.io/badge/dsh--plugin-✅-green)](https://github.com/topics/dsh-plugin)
 
-English · [简体中文](README-zh.md)
+</div>
 
 ---
 
@@ -17,6 +26,14 @@ English · [简体中文](README-zh.md)
 The research family is deliberately separate packages: `dsh-research-core`, `dsh-doc-anchor`, `dsh-cite-verify`, `dsh-claim-check`, `dsh-statcheck`, `dsh-retraction-watch`, `dsh-repro-audit`, `dsh-sr-ledger`, `dsh-meta-analysis`, `dsh-manuscript-check`, `dsh-research-report` and `dsh-library`. That is good for composition and bad for onboarding: a new profile needs twelve installs and a way to tell whether the rows actually mounted.
 
 This package is the **bundle** for that set. One dependency tree, one `cordis.patch.yml`, one `research_doctor` row. It does not re-implement any tool.
+
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-research-suite-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-research-suite-flow-v5-light.svg" width="100%" alt="dsh-research-suite structure: one dsh plugin add call installs a bundle patch with twelve dependency rows and the doctor row, the rows mount researchEvidence, researchReport and one tool, and research_doctor inspects the .research-rep store read-only and returns a status with hints">
+</picture>
+
+*Structure: install → mount → inspect; `research_doctor` is the only tool this package adds, and it never repairs. The token labels inside the diagram are the real service names, journal files and config keys, so the same picture serves all five languages.*
 
 ## Install
 
@@ -34,6 +51,11 @@ Run research_doctor.
 A healthy profile reports `research_doctor: ok`, both services `on`, and the latest record as `(sealed)`.
 
 ## What `research_doctor` checks
+
+![dsh-research-suite test suite: the real vitest run in this checkout — 9 tests across the package contract, the mount, research_doctor and REP inspection — followed by the verify:package gate reporting 12 dependency rows](docs/assets/dsh-research-suite-demo.gif)
+
+*Animated: the real `pnpm exec vitest run` output on 2026-11-21 (3 test files, 9 tests), then `pnpm run verify:package`. The bundle has no CLI of its own, so the doctor contract and the package gate are the run; pass markers and timings are omitted.*
+
 
 | Check | Meaning |
 |---|---|
