@@ -27,7 +27,6 @@
 
 这个包就是那套东西的 **bundle**：一棵依赖树、一个 `cordis.patch.yml`、一行 `research_doctor`。它不重新实现任何工具。
 
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-research-suite-flow-v5-dark.svg">
   <img src="docs/assets/dsh-research-suite-flow-v5-light.svg" width="100%" alt="dsh-research-suite 结构图：一条 dsh plugin add 安装带十二个依赖行与 doctor 行的 bundle patch，这些行挂载 researchEvidence、researchReport 和一个工具，research_doctor 只读检查 .research-rep 存储并返回 status 与 hints">
@@ -56,7 +55,6 @@ Run research_doctor.
 
 *动图是 2026-11-21 真实运行的 `pnpm exec vitest run` 输出（3 个测试文件、9 个测试），随后是 `pnpm run verify:package`。这个 bundle 没有自己的 CLI，因此 doctor 契约与包门禁就是那次运行；通过标记与耗时已省略。*
 
-
 | 检查 | 含义 |
 |---|---|
 | `services.researchEvidence` | `ctx.researchEvidence` 已挂载（core 生效） |
@@ -71,7 +69,7 @@ Run research_doctor.
 
 | | |
 |---|---|
-| DeepSeek Harness | `dsh-v0.2.2-rc.4`（本机实测）—— peer 区间 `>=0.2.1-0 <0.3.0 \|\| >=0.2.2-0 <0.3.0` |
+| DeepSeek Harness | `dsh-v0.2.3-alpha.1`（本机实测）—— peer 区间 `>=0.2.1-0 <0.3.0 \|\| >=0.2.2-0 <0.3.0` |
 | Node | `^22.19.0 \|\| >=24.9.0`（实测 `24.22.1`），仅 ESM |
 | Peers | `@deepseek-ai/cordis ^4.0.5-alpha.1`、`@deepseek-ai/dsh-tools`、`@deepseek-ai/schemastery ^3.18.5-alpha.1` |
 | 运行时依赖 | 十二个科研插件（固定版本） |

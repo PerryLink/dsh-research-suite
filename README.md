@@ -27,7 +27,6 @@ The research family is deliberately separate packages: `dsh-research-core`, `dsh
 
 This package is the **bundle** for that set. One dependency tree, one `cordis.patch.yml`, one `research_doctor` row. It does not re-implement any tool.
 
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-research-suite-flow-v5-dark.svg">
   <img src="docs/assets/dsh-research-suite-flow-v5-light.svg" width="100%" alt="dsh-research-suite structure: one dsh plugin add call installs a bundle patch with twelve dependency rows and the doctor row, the rows mount researchEvidence, researchReport and one tool, and research_doctor inspects the .research-rep store read-only and returns a status with hints">
@@ -56,7 +55,6 @@ A healthy profile reports `research_doctor: ok`, both services `on`, and the lat
 
 *Animated: the real `pnpm exec vitest run` output on 2026-11-21 (3 test files, 9 tests), then `pnpm run verify:package`. The bundle has no CLI of its own, so the doctor contract and the package gate are the run; pass markers and timings are omitted.*
 
-
 | Check | Meaning |
 |---|---|
 | `services.researchEvidence` | `ctx.researchEvidence` is mounted (core active) |
@@ -71,7 +69,7 @@ It is **read-only**. It never repairs, deletes, edits or creates a record. A mal
 
 | | |
 |---|---|
-| DeepSeek Harness | `dsh-v0.2.2-rc.4` (verified on this machine) — peer line `>=0.2.1-0 <0.3.0 \|\| >=0.2.2-0 <0.3.0` |
+| DeepSeek Harness | `dsh-v0.2.3-alpha.1` (verified on this machine) — peer line `>=0.2.1-0 <0.3.0 \|\| >=0.2.2-0 <0.3.0` |
 | Node | `^22.19.0 \|\| >=24.9.0` (tested on `24.22.1`), ESM only |
 | Peers | `@deepseek-ai/cordis ^4.0.5-alpha.1`, `@deepseek-ai/dsh-tools`, `@deepseek-ai/schemastery ^3.18.5-alpha.1` |
 | Runtime dependencies | the twelve research plugins (pinned) |

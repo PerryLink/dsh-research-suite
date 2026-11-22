@@ -27,7 +27,6 @@
 
 यह पैकेज उसी समूह का **bundle** है। एक ही dependency ट्री, एक ही `cordis.patch.yml`, एक ही `research_doctor` पंक्ति। यह किसी भी टूल को दोबारा लागू नहीं करता।
 
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-research-suite-flow-v5-dark.svg">
   <img src="docs/assets/dsh-research-suite-flow-v5-light.svg" width="100%" alt="dsh-research-suite संरचना: एक dsh plugin add कॉल बारह dependency पंक्तियों और doctor पंक्ति वाला bundle patch इंस्टॉल करता है, पंक्तियाँ researchEvidence, researchReport और एक टूल माउंट करती हैं, और research_doctor .research-rep स्टोर को केवल-पढ़ने के तौर पर जाँचकर status और hints लौटाता है">
@@ -56,7 +55,6 @@ Run research_doctor.
 
 *एनिमेटेड: 2026-11-21 को `pnpm exec vitest run` का असली आउटपुट (3 टेस्ट फ़ाइलें, 9 टेस्ट), फिर `pnpm run verify:package`। इस bundle का अपना कोई CLI नहीं है, इसलिए doctor कॉन्ट्रैक्ट और पैकेज गेट ही वह रन हैं; पास मार्कर और समय हटा दिए गए हैं।*
 
-
 | जाँच | अर्थ |
 |---|---|
 | `services.researchEvidence` | `ctx.researchEvidence` माउंट है (core सक्रिय) |
@@ -71,7 +69,7 @@ Run research_doctor.
 
 | | |
 |---|---|
-| DeepSeek Harness | `dsh-v0.2.2-rc.4` (इस मशीन पर सत्यापित) — peer line `>=0.2.1-0 <0.3.0 \|\| >=0.2.2-0 <0.3.0` |
+| DeepSeek Harness | `dsh-v0.2.3-alpha.1` (इस मशीन पर सत्यापित) — peer line `>=0.2.1-0 <0.3.0 \|\| >=0.2.2-0 <0.3.0` |
 | Node | `^22.19.0 \|\| >=24.9.0` (`24.22.1` पर परीक्षित), केवल ESM |
 | Peers | `@deepseek-ai/cordis ^4.0.5-alpha.1`, `@deepseek-ai/dsh-tools`, `@deepseek-ai/schemastery ^3.18.5-alpha.1` |
 | रनटाइम निर्भरताएँ | बारह अनुसंधान प्लगइन (पिन किए गए) |

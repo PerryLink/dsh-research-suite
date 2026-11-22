@@ -27,7 +27,6 @@ A família de pesquisa é deliberadamente dividida em pacotes separados: `dsh-re
 
 Este pacote é o **bundle** desse conjunto. Uma única árvore de dependências, um único `cordis.patch.yml`, uma única linha `research_doctor`. Ele não reimplementa nenhuma ferramenta.
 
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-research-suite-flow-v5-dark.svg">
   <img src="docs/assets/dsh-research-suite-flow-v5-light.svg" width="100%" alt="dsh-research-suite estrutura: uma chamada dsh plugin add instala um bundle patch com doze linhas de dependência e a linha do doctor, as linhas montam researchEvidence, researchReport e uma ferramenta, e o research_doctor inspeciona o armazenamento .research-rep em somente leitura e devolve um status com hints">
@@ -56,7 +55,6 @@ Um perfil saudável relata `research_doctor: ok`, ambos os serviços em `on` e o
 
 *Animado: a saída real de `pnpm exec vitest run` em 2026-11-21 (3 arquivos de teste, 9 testes) e depois `pnpm run verify:package`. O bundle não tem CLI própria, então o contrato do doctor e o portão do pacote são a execução; marcadores de aprovação e tempos foram omitidos.*
 
-
 | Verificação | Significado |
 |---|---|
 | `services.researchEvidence` | `ctx.researchEvidence` está montado (core ativo) |
@@ -71,7 +69,7 @@ Um perfil saudável relata `research_doctor: ok`, ambos os serviços em `on` e o
 
 | | |
 |---|---|
-| DeepSeek Harness | `dsh-v0.2.2-rc.4` (verificado nesta máquina) — peer line `>=0.2.1-0 <0.3.0 \|\| >=0.2.2-0 <0.3.0` |
+| DeepSeek Harness | `dsh-v0.2.3-alpha.1` (verificado nesta máquina) — peer line `>=0.2.1-0 <0.3.0 \|\| >=0.2.2-0 <0.3.0` |
 | Node | `^22.19.0 \|\| >=24.9.0` (testado em `24.22.1`), somente ESM |
 | Peers | `@deepseek-ai/cordis ^4.0.5-alpha.1`, `@deepseek-ai/dsh-tools`, `@deepseek-ai/schemastery ^3.18.5-alpha.1` |
 | Dependências de execução | os doze plugins de pesquisa (fixados) |
